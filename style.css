@@ -5,6 +5,10 @@
     list-style: none;
 }
 
+p{
+    display: none;
+}
+
 .container {
     height: 100vh;
     overflow: hidden;       /* Desabilitando o scroll da página */
@@ -14,61 +18,69 @@
     display: flex;
 }
 .imagem {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
-#casa1,#casa2,#casa3,#casa4 {
+.casas {
     position: relative;
     height: 50vh;
     width: 50%;
     text-align: center;
 }
 
-#casa1 {
+#casaGrifinoria {
     background-image: url(./img/Gryffindor.png);
-}#casa2 {
+}#casaSonserina {
     background-image: url(./img/Slytherin.png);
-}#casa3 {
+}#casaCorvinal {
     background-image: url(./img/Ravenclaw.png);
-}#casa4 {
+}#casaLufaLufa {
     background-image: url(./img/Hufflepuff.png);
 }
 
 
-.star {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    bottom: 10px;
-    right: 10px;
-    cursor: pointer;
+.btn {
+    background-color: transparent;
+    border: 0;
 }
 
-.star:hover {
-    width: 55px;
-    height: 55px;
-    transition: all .2s;
-}
-p{
-    display: none;
-}
+#btnGrifinoria:hover .imagem{
+    transition: all 1s;
+    border-bottom: 2px solid red;
+    cursor: pointer;
+} 
+#btnSonserina:hover .imagem{
+    transition: all 1s;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+} #btnCorvinal:hover .imagem{
+    transition: all 1s;
+    border-bottom: 2px solid blue;
+    cursor: pointer;
+} #btnLufaLufa:hover .imagem{
+    transition: all 1s;
+    border-bottom: 2px solid yellow;
+    cursor: pointer;
+} 
+
+
 
 /* Active */
 
 
 /* Deixando a foto das casas invisíveis após o botão ser clicado */
-#casa1.active .imagem,
-#casa2.active .imagem,
-#casa3.active .imagem,
-#casa4.active .imagem{
+#casaGrifinoria.active .imagem,
+#casaSonserina.active .imagem,
+#casaCorvinal.active .imagem,
+#casaLufaLufa.active .imagem{
     visibility: hidden;
 }
 
 /* Paragrafos que falam sobre as casas */
-#casa1.active p,
-#casa2.active p,
-#casa3.active p,
-#casa4.active p{
+#casaGrifinoria.active p,
+#casaSonserina.active p,
+#casaCorvinal.active p,
+#casaLufaLufa.active p{
     display: flex;
     /* position: relative; */
     font-size: 28px;
@@ -79,10 +91,10 @@ p{
 }
 
 /* Container que segura as div de características das casas */
-#casa1.active .flex,
-#casa2.active .flex,
-#casa3.active .flex,
-#casa4.active .flex{
+#casaGrifinoria.active .flex,
+#casaSonserina.active .flex,
+#casaCorvinal.active .flex,
+#casaLufaLufa.active .flex{
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
@@ -90,42 +102,42 @@ p{
 }
 
 /* Div com as características das casas  */
-#casa1.active .flex > div,
-#casa2.active .flex > div,
-#casa3.active .flex > div,
-#casa4.active .flex > div{
+#casaGrifinoria.active .flex > div,
+#casaSonserina.active .flex > div,
+#casaCorvinal.active .flex > div,
+#casaLufaLufa.active .flex > div{
     flex: 1 1 250px;
     margin: 10px;    
 }
 
 /* Tentando dar um estilo para o :hover */
 /* INACABADO */
-#casa1.active .flex > div:hover,
-#casa2.active .flex > div:hover,
-#casa3.active .flex > div:hover,
-#casa4.active .flex > div:hover{
+#casaGrifinoria.active .flex > div:hover,
+#casaSonserina.active .flex > div:hover,
+#casaCorvinal.active .flex > div:hover,
+#casaLufaLufa.active .flex > div:hover{
     cursor: pointer;
     font-size: 400px;
 }
 
 /* Características das casas */
-#casa1.active .flex > div > p,
-#casa2.active .flex > div > p,
-#casa3.active .flex > div > p,
-#casa4.active .flex > div > p{
+#casaGrifinoria.active .flex > div > p,
+#casaSonserina.active .flex > div > p,
+#casaCorvinal.active .flex > div > p,
+#casaLufaLufa.active .flex > div > p{
     justify-content: center;
     padding: 10px;
     margin: 0 auto;
 }
 
 /* Dando as devidas cores de background para as característias de cada casa */
-#casa1.active .flex > div {
+#casaGrifinoria.active .flex > div {
     background-color: rgb(170, 63, 63);
-}#casa2.active .flex > div {
+}#casaSonserina.active .flex > div {
     background-color: rgb(4, 80, 23);
-}#casa3.active .flex > div {
+}#casaCorvinal.active .flex > div {
     background-color: rgb(20, 42, 165);
-}#casa4.active .flex > div {
+}#casaLufaLufa.active .flex > div {
     background-color: rgb(179, 141, 20);
 }
 
