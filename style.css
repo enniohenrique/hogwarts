@@ -16,24 +16,24 @@
 .imagem {
     margin-top: 50px;
 }
+
 #casa1,#casa2,#casa3,#casa4 {
     position: relative;
     height: 50vh;
     width: 50%;
     text-align: center;
 }
+
 #casa1 {
     background-image: url(./img/Gryffindor.png);
-}
-#casa2 {
+}#casa2 {
     background-image: url(./img/Slytherin.png);
-}
-#casa3 {
+}#casa3 {
     background-image: url(./img/Ravenclaw.png);
-}
-#casa4 {
+}#casa4 {
     background-image: url(./img/Hufflepuff.png);
 }
+
 
 .star {
     position: absolute;
@@ -54,39 +54,70 @@ p{
     transition: all 1s;
 }
 
-#casa1.active .imagem,#casa2.active .imagem,#casa3.active .imagem,#casa4.active .imagem{
+/* Active */
+
+
+/* Deixando a foto das casas invisíveis após o botão ser clicado */
+#casa1.active .imagem,
+#casa2.active .imagem,
+#casa3.active .imagem,
+#casa4.active .imagem{
     visibility: hidden;
 }
 
-#casa1.active p,#casa2.active p,#casa3.active p,#casa4.active p{
-    margin-top: 20px;
+/* Paragrafos que falam sobre as casas */
+#casa1.active p,
+#casa2.active p,
+#casa3.active p,
+#casa4.active p{
+    margin: 30px;  
     display: flex;
     /* position: relative; */
-    font-size: 32px;
-    transition: all 1s;
+    font-size: 28px;
     color: white;
-    margin-bottom: 20px;
 }
 
-#casa1.active .flex,#casa2.active .flex,#casa3.active .flex,#casa4.active .flex{
+/* Container que segura as div de características das casas */
+#casa1.active .flex,
+#casa2.active .flex,
+#casa3.active .flex,
+#casa4.active .flex{
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
     margin: 0 auto;
 }
-#casa1.active .flex > div,#casa2.active .flex > div,#casa3.active .flex > div,#casa4.active .flex > div{
+/* Div com as características das casas  */
+#casa1.active .flex > div,
+#casa2.active .flex > div,
+#casa3.active .flex > div,
+#casa4.active .flex > div{
     flex: 1 1 250px;
     margin: 10px;    
-    background-color: rgb(170, 63, 63);
 }
 
+/* Características das casas */
 #casa1.active .flex > div > p,
-#casa2.active .flex > div > p,#casa3.active .flex > div > p,
+#casa2.active .flex > div > p,
+#casa3.active .flex > div > p,
 #casa4.active .flex > div > p{
     justify-content: center;
     padding: 10px;
     margin: 0 auto;
 }
+
+/* Dando as devidas cores de background para as característias de cada casa */
+#casa1.active .flex > div {
+    background-color: rgb(170, 63, 63);
+}#casa2.active .flex > div {
+    background-color: rgb(4, 80, 23);
+}#casa3.active .flex > div {
+    background-color: rgb(20, 42, 165);
+}#casa4.active .flex > div {
+    background-color: rgb(179, 141, 20);
+}
+
+
 
 
 /* RESPONSIVO */
