@@ -51,7 +51,6 @@
 }
 p{
     display: none;
-    transition: all 1s;
 }
 
 /* Active */
@@ -70,11 +69,13 @@ p{
 #casa2.active p,
 #casa3.active p,
 #casa4.active p{
-    margin: 30px;  
     display: flex;
     /* position: relative; */
     font-size: 28px;
     color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 35px;
 }
 
 /* Container que segura as div de características das casas */
@@ -87,6 +88,7 @@ p{
     max-width: 800px;
     margin: 0 auto;
 }
+
 /* Div com as características das casas  */
 #casa1.active .flex > div,
 #casa2.active .flex > div,
@@ -94,6 +96,16 @@ p{
 #casa4.active .flex > div{
     flex: 1 1 250px;
     margin: 10px;    
+}
+
+/* Tentando dar um estilo para o :hover */
+/* INACABADO */
+#casa1.active .flex > div:hover,
+#casa2.active .flex > div:hover,
+#casa3.active .flex > div:hover,
+#casa4.active .flex > div:hover{
+    cursor: pointer;
+    font-size: 400px;
 }
 
 /* Características das casas */
