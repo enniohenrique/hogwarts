@@ -17,17 +17,19 @@ p{
 .linha1,.linha2 {
     display: flex;
 }
+
 .imagem {
-    margin-top: 40px;
+    margin-top: 40px;       /* Dando um espaço do nome da casa para o topo */
 }
 
 .casas {
     position: relative;
-    height: 50vh;
-    width: 50%;
+    height: 50vh;       /* Fazendo com que a casa ocupe 50% da altura da tela */
+    width: 50%;         /* Fazendo com que a casa ocupe 50% da largura da tela */
     text-align: center;
 }
 
+/* Colocando a cor de background de casa casa */
 #casaGrifinoria {
     background-image: url(./img/Gryffindor.png);
 }#casaSonserina {
@@ -38,51 +40,38 @@ p{
     background-image: url(./img/Hufflepuff.png);
 }
 
-
 .btn {
     background-color: transparent;
     border: 0;
 }
 
+.btn:hover .imagem {
+    transition: all .5s;
+    cursor: pointer;
+}
+
 #btnGrifinoria:hover .imagem{
-    transition: all 1s;
     border-bottom: 2px solid red;
-    cursor: pointer;
-} 
-#btnSonserina:hover .imagem{
-    transition: all 1s;
+}#btnSonserina:hover .imagem{
     border-bottom: 2px solid green;
-    cursor: pointer;
-} #btnCorvinal:hover .imagem{
-    transition: all 1s;
+}#btnCorvinal:hover .imagem{
     border-bottom: 2px solid blue;
-    cursor: pointer;
-} #btnLufaLufa:hover .imagem{
-    transition: all 1s;
+}#btnLufaLufa:hover .imagem{
     border-bottom: 2px solid yellow;
-    cursor: pointer;
 } 
 
 
 
 /* Active */
 
-
 /* Deixando a foto das casas invisíveis após o botão ser clicado */
-#casaGrifinoria.active .imagem,
-#casaSonserina.active .imagem,
-#casaCorvinal.active .imagem,
-#casaLufaLufa.active .imagem{
+.casas.active .imagem{
     visibility: hidden;
 }
 
 /* Paragrafos que falam sobre as casas */
-#casaGrifinoria.active p,
-#casaSonserina.active p,
-#casaCorvinal.active p,
-#casaLufaLufa.active p{
+.casas.active p{
     display: flex;
-    /* position: relative; */
     font-size: 28px;
     color: white;
     max-width: 800px;
@@ -91,10 +80,7 @@ p{
 }
 
 /* Container que segura as div de características das casas */
-#casaGrifinoria.active .flex,
-#casaSonserina.active .flex,
-#casaCorvinal.active .flex,
-#casaLufaLufa.active .flex{
+.casas.active .flex{
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
@@ -102,32 +88,15 @@ p{
 }
 
 /* Div com as características das casas  */
-#casaGrifinoria.active .flex > div,
-#casaSonserina.active .flex > div,
-#casaCorvinal.active .flex > div,
-#casaLufaLufa.active .flex > div{
+.casas.active .flex > div{
     flex: 1 1 250px;
     margin: 10px;    
 }
 
-/* Tentando dar um estilo para o :hover */
-/* INACABADO */
-#casaGrifinoria.active .flex > div:hover,
-#casaSonserina.active .flex > div:hover,
-#casaCorvinal.active .flex > div:hover,
-#casaLufaLufa.active .flex > div:hover{
-    cursor: pointer;
-    font-size: 400px;
-}
-
 /* Características das casas */
-#casaGrifinoria.active .flex > div > p,
-#casaSonserina.active .flex > div > p,
-#casaCorvinal.active .flex > div > p,
-#casaLufaLufa.active .flex > div > p{
+.casas.active .flex > div > p{
     justify-content: center;
     padding: 10px;
-    margin: 0 auto;
 }
 
 /* Dando as devidas cores de background para as característias de cada casa */
@@ -142,14 +111,8 @@ p{
 }
 
 
-
-
 /* RESPONSIVO */
 
 @media (max-width: 768px) {
-    .icone {
-        width: 150px;
-        height: 150px;
-        margin-top: 60%;
-    }
+
 }
