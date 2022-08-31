@@ -78,7 +78,7 @@ p{
     display: flex;
     font-size: 28px;
     color: white;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding-top: 35px;
 }
@@ -112,6 +112,38 @@ p{
     background-color: rgb(20, 42, 165);
 }#casaLufaLufa.active .flex > div {
     background-color: rgb(179, 141, 20);
+}
+
+
+/* Seta de voltar */
+.arrowBack {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    display: none;
+    transition: all .3s;
+}
+
+.arrowBack:hover {
+    bottom: 10px;
+    cursor: pointer;
+}
+
+#arrowBack_grifinoria:hover {
+    border-bottom: 1.5px solid red;
+}
+#arrowBack_sonserina:hover {
+    border-bottom: 1.5px solid green;
+}
+#arrowBack_corvinal:hover {
+    border-bottom: 1.5px solid blue;
+}
+#arrowBack_lufalufa:hover {
+    border-bottom: 1.5px solid yellow;
+}
+
+.casas.active .arrowBack {
+    display:block;
 }
 
 
